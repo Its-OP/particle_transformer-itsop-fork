@@ -60,9 +60,9 @@ weaver \
     --num-workers 1 \
     --fetch-step 1 \
     --in-memory \
-    --batch-size 512 \
-    --samples-per-epoch $((2400 * 512)) \
-    --samples-per-epoch-val $((800 * 512)) \
+    --batch-size ${batchsize} \
+    --samples-per-epoch $((2400 * 512 * 512 / ${batchsize})) \
+    --samples-per-epoch-val $((800 * 512 * 512 / ${batchsize})) \
     --num-epochs 20 \
     --gpus ${gpus} \
     --start-lr $lr \
