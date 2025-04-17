@@ -60,11 +60,11 @@ weaver \
     --num-workers 1 \
     --fetch-step 1 \
     --in-memory \
-    --batch-size 256 \
+    --batch-size 512 \
     --samples-per-epoch $((2400 * 512)) \
     --samples-per-epoch-val $((800 * 512)) \
     --num-epochs 20 \
-    --gpus 1 \
+    --gpus 2 \
     --start-lr $lr \
     --optimizer ranger \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
