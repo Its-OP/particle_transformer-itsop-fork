@@ -66,6 +66,7 @@ weaver \
     --gpus ${gpus} \
     --start-lr $lr \
     --optimizer $optimizer \
+    --lr-scheduler $scheduler \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --predict-output pred.root \
     ${extraopts} "${@:3}"
