@@ -66,7 +66,7 @@ weaver \
     --num-epochs 20 \
     --gpus ${gpus} \
     --start-lr $lr \
-    --optimizer ranger \
+    --optimizer $optimizer \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --predict-output pred.root \
     ${extraopts} "${@:3}"
