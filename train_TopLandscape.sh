@@ -16,8 +16,7 @@ suffix=${COMMENT}
 model=$1
 extraopts=""
 if [[ "$model" == "ParT" ]]; then
-    modelopts="networks/example_ParticleTransformer.py --use-amp --optimizer-option weight_decay 0.05"
-    lr="2e-4"
+    modelopts="networks/example_ParticleTransformer.py --use-amp --optimizer-option weight_decay $weight_decay"
 elif [[ "$model" == "ParT-FineTune" ]]; then
     modelopts="networks/example_ParticleTransformer_finetune.py --use-amp --optimizer-option weight_decay 0.01"
     lr="1e-4"
