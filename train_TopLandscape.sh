@@ -62,7 +62,7 @@ weaver \
     --batch-size ${batchsize} \
     --samples-per-epoch $((2400 * 512 * 512 / ${batchsize})) \
     --samples-per-epoch-val $((800 * 512 * 512 / ${batchsize})) \
-    --num-epochs ${num-epochs} \
+    --num-epochs ${num_epochs} \
     --gpus ${gpus} \
     --start-lr $lr \
     --optimizer $optimizer \
