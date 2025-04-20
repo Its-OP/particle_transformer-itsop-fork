@@ -70,4 +70,3 @@ weaver \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --predict-output pred.root \
     ${extraopts} "${@:3}"
-    
