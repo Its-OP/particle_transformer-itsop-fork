@@ -60,7 +60,7 @@ weaver \
     --fetch-step 1 \
     --in-memory \
     --batch-size ${batchsize} \
-    --samples-per-epoch $((2400 * 512)) \
+    --samples-per-epoch $((2400 * 512 / 2)) \
     --samples-per-epoch-val $((800 * 512)) \
     --num-epochs ${num_epochs} \
     --gpus ${gpus} \
