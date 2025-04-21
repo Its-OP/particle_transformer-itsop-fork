@@ -12,7 +12,6 @@ class ParticleTransformerWrapper(torch.nn.Module):
     def __init__(self, **kwargs) -> None:
         super().__init__()
         self.mod = ParticleTransformer(**kwargs)
-        self._modules['mod'] = self.mod
 
     @torch.jit.ignore
     def no_weight_decay(self):
