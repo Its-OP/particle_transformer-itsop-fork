@@ -70,4 +70,5 @@ weaver \
     --lr-scheduler $scheduler \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --predict-output pred.root \
+    -- PYTHONWARNINGS="ignore" \
     ${extraopts} "${@:3}"
