@@ -70,4 +70,5 @@ weaver \
     --lr-scheduler $scheduler \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --predict-output pred.root \
+    --compile ${compile}
     ${extraopts} "${@:3}"
