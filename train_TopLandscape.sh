@@ -49,7 +49,6 @@ if [[ "${FEATURE_TYPE}" != "kin" ]]; then
     exit 1
 fi
 
-samples_per_epoch=$(echo "2400 * 512 * $dataset_portion / 1" | bc)
 weaver \
     --data-train "${DATADIR}/train_file.parquet" \
     --data-val "${DATADIR}/val_file.parquet" \
@@ -61,7 +60,7 @@ weaver \
     --fetch-step 1 \
     --in-memory \
     --batch-size ${batchsize} \
-    --samples-per-epoch "$samples_per_epoch" \
+    --samples-per-epoch $((2400 * 512 / ${samples_ratio})) \
     --samples-per-epoch-val $((800 * 512)) \
     --num-epochs ${num_epochs} \
     --gpus ${gpus} \
