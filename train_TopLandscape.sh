@@ -70,5 +70,5 @@ weaver \
     --log logs/TopLandscape_${model}_{auto}${suffix}.log \
     --tensorboard TopLandscape_${SAMPLE_TYPE}_${model}${suffix} \
     --predict-output pred.root \
-    --compile True \
+    --compile \
     ${extraopts} "${@:3}"
